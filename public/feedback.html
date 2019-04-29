@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title>Give Feedback</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="keywords" content="" />
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+
+    </script>
+    <script src="JS/main.js"></script>
+    <!-- Custom Theme files -->
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+    <!-- portfolio -->
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+    <!-- font-awesome icons -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <!-- //Custom Theme files -->
+    <!-- online-fonts -->
+    <link
+        href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800"
+        rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700" rel="stylesheet">
+    <!-- //online-fonts -->
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+
+
+    <script src="JS/connection.js"> </script>
+
+
+    <link rel="icon" type="image/png" href="images/bppimt.ico" />
+</head>
+
+<body>
+    <section class="inner-banner" id="home">
+        <div class="header-top-w3layouts text-right">
+
+        </div>
+        <!-- //Navigation -->
+        <!-- //banner -->
+        <div class="inner-page-info text-center">
+            <ol class="breadcrumb text-center mx-auto">
+                <li class="breadcrumb-item">
+                    <a href="index.html">Home</a>
+                </li>
+                <li class="breadcrumb-item active">Contact Developers</li>
+                <li class="breadcrumb-item">
+                    <a href="login.html">Login</a>
+                </li>
+            </ol>
+            <!---->
+        </div>
+    </section>
+    <!-- /contact -->
+    <section class="wedo py-lg-5 py-5">
+        <div class="container py-lg-5 py-3">
+            <div class="text-center">
+                <h3 class="tittle_head">Contact Us</h3>
+            </div>
+            <div class="contact-info row py-5">
+                <div class="col-lg-6 mt-lg-0 mt-5">
+                    <div class="contact-right">
+                        <h2 class="mb-3">Dont hesitate to contact us for any kind of issue</h2>
+                    </div>
+                </div>
+                <div class="col-lg-6 contact-form">
+                    <form action="feedback.html" id="feedbackForm">
+                        <div class="fields-grid">
+
+                            <div class="styled-input agile-styled-input-top">
+                                <label>College Roll No*</label>
+                                <input type="text" class="form-control" id="clgroll" placeholder="" required>
+
+                            </div>
+
+
+                            <div class="styled-input mb-4">
+                                <label>How can we help?</label>
+                                <textarea class="form-control" id="feedback" placeholder="" required></textarea>
+
+                            </div>
+                        </div>
+                        <input type="submit" value="Send">
+                    </form>
+                </div>
+
+            </div>
+            <script src="JS/feedbacksubmit.js"></script>
+    </section>
+    <!-- //contact -->
+
+    <!-- footer -->
+    <section class="foot-top-w3layouts pt-5">
+
+        <div class="cpy-right text-center pb-5">
+
+            <a href="#home" class="move-top scroll"><span class="fa fa-angle-double-up" aria-hidden="true"></span></a>
+        </div>
+    </section>
+    <!-- //footer -->
+
+</body>
+
+</html>

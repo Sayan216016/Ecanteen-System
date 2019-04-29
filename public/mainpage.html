@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title>Edit Menu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="keywords" content="" />
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+
+    </script>
+
+    <script>
+        history.pushState(null, null, document.URL);
+        window.addEventListener('popstate', function () {
+            history.pushState(null, null, document.URL);
+        });
+    </script>
+
+    <script>
+        if (sessionStorage.getItem("cheak_flag") != '1') {
+            window.stop();
+            alert("Please login First");
+            location.replace("login.html");
+        }
+
+        // sessionStorage.setItem("cheak_flag", "1");
+    </script>
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+    <script src="JS/connection.js"> </script>
+
+    <script src="JS/main.js"></script>
+    <link href="css/tablestyle.css" type="text/css" rel="stylesheet" media="all">
+    <!-- Custom Theme files -->
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+    <!-- portfolio -->
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+    <!-- font-awesome icons -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <!-- //Custom Theme files -->
+    <!-- online-fonts -->
+    <link
+        href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800"
+        rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700" rel="stylesheet">
+    <!-- //online-fonts -->
+
+    <link rel="icon" type="image/png" href="images/bppimt.ico" />
+
+
+    <script src="JS/logout.js"></script>
+</head>
+
+<body>
+    <section class="inner-banner" id="home">
+        <div class="header-top-w3layouts text-right">
+            <!-- //Navigation -->
+            <!-- //banner -->
+            <div class="inner-page-info text-center">
+                <ol class="breadcrumb text-center mx-auto">
+                    <li class="breadcrumb-item active">Edit Menu</li>
+                    <li class="breadcrumb-item">
+                        <a href="orderpage.html">View Order</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="register.html">Register</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="feedbackview.html">Feedbacks</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="#" onclick="logOut()">LOG OUT</a>
+                    </li>
+                </ol>
+                <!---->
+            </div>
+    </section>
+    <!-- /contact -->
+    <section class="wedo py-lg-5 py-5">
+        <div class="container py-lg-5 py-3">
+            <div class="text-center">
+                <h3 class="tittle_head">Welcome Canteen Adminstrator</h3>
+            </div>
+            <br><br><br><br>
+
+            <div class="row">
+                <div class="col-sm-9">
+                    <div class="text-center">
+                        <h5 class="tittle_head">TODAY'S MENU</h5>
+                        <br><br>
+                    </div>
+                    <table width="89%" class="table-fill" id="ordertable">
+                        <thead>
+                            <tr>
+                                <th class="text-left">FOOD NAME</th>
+                                <th class="text-left">DETAILS</th>
+                                <th class="text-left">PRICE</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-hover" id="">
+
+                        </tbody>
+                    </table>
+                    <form action="mainpage.html" id="deletefoodform">
+                        <div class="text-center">
+                            <br><br>
+                            <input type="submit" value="Delete All">
+                        </div>
+                    </form>
+
+                </div>
+
+                <br><br>
+
+                <div class="col-sm-3">
+                    <div class="text-center">
+                        <h5 class="tittle_head">ADD NEW ITEM</h5>
+                        <br><br>
+                    </div>
+                    <form action="mainpage.html" id="addfoodForm">
+                        <div class="fields-grid">
+                            <div class="styled-input agile-styled-input-top">
+
+                                <input type="text" class="form-control" id="itemname" placeholder="Item Name" required>
+                                <br>
+                            </div>
+                            <div class="styled-input">
+
+                                <textarea class="form-control" id="desc" placeholder="Description" required></textarea>
+                                <br>
+                            </div>
+                            <div class="styled-input agile-styled-input-top">
+
+                                <input type="text" class="form-control" id="price" placeholder="Price" required>
+                                <br>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="text-center">
+                            <input type="submit" value="Add Item">
+                        </div>
+                        <p id="addeditem"></p>
+                    </form>
+                </div>
+            </div>
+            <!-- </div>
+
+            </div> -->
+
+    </section>
+    <script src="JS/dataadd.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script src="JS/dataview.js"></script>
+    <script src="JS/datadelete.js"></script>
+    <!-- //contact -->
+
+    <!-- footer -->
+    <section class="foot-top-w3layouts pt-5">
+
+        <div class="cpy-right text-center pb-5">
+            <a href="#home" class="move-top scroll"><span class="fa fa-angle-double-up" aria-hidden="true"></span></a>
+        </div>
+    </section>
+    <!-- //footer -->
+
+</body>
+
+</html>
